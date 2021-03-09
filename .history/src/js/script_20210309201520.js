@@ -23,11 +23,10 @@
 
     for (const book of thisBooksList.data) {
       const generatedHTML = templates.booksList(book);
+      console.log('generatedHTML: ', generatedHTML);
       thisBooksList.element = utils.createDOMFromHTML(generatedHTML);
       const bookContainer = document.querySelector(select.containerOf.booksList);
       bookContainer.appendChild(thisBooksList.element);
     }
   }
-
-  render();
 }
